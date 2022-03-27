@@ -23,8 +23,11 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     const db = client.db("portfolio");
     const projectsCollection = db.collection("projects");
     const contactsCollection = db.collection("contact");
+    app.get('/', (req, res) => {
+      res.sendFile(__dirname + '/Template/index.html')
+    })
 
-    app.get("/", (req, res) => {
+    app.get("/home-projects", (req, res) => {
       db.collection("projects")
         .find()
         .toArray()
@@ -34,7 +37,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         .catch((error) => console.error(error));
     });
 
-    app.get("/get-contacts", (req, res) => {
+    app.get("/home-contacts", (req, res) => {
       db.collection("contact")
         .find()
         .toArray()
@@ -54,7 +57,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         .catch((error) => console.error(error));
     });
 
-    app.get("/contatos", (req, res) => {
+    app.get("/contacts", (req, res) => {
       db.collection("contact")
         .find()
         .toArray()
@@ -70,7 +73,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
     });
-    app.put("/contatos", (req, res) => {
+    app.put("/contacts", (req, res) => {
       contactsCollection
         .findOneAndUpdate(query, update, options)
         .then((result) => console.log(result))
