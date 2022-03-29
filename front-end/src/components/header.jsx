@@ -7,7 +7,7 @@ const Header = () => {
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#menu">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       {/* <div className="icons">

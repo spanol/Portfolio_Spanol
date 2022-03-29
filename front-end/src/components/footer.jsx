@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import getFromApi from "../services/api";
+import { handleClick } from "../services/handleClick";
 const Footer = () => {
   const [contactForm, setContactForm] = useState([]);
 
@@ -8,12 +9,14 @@ const Footer = () => {
     getFromApi("contacts", setContactForm);
   }, []);
 
+
+
   return (
     <section className="footer">
       <div className="share">
-        {contactForm.map(( {_id, link, icon }) => (
-            <a key={_id} href={link} className={icon}></a>
-            ))}
+        {contactForm.map(({ _id, link, icon }) => (
+          <a key={_id} onClick={() => handleClick(link)} className={icon}></a>
+        ))}
       </div>
 
       <div className="links">

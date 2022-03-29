@@ -24,7 +24,7 @@ const About = () => {
             enim quod veritatis, nihil voluptas culpa! Neque consectetur
             obcaecati sapiente?
           </p>
-          <a href="#" className="btn">
+          <a href="#"  className="btn">
             learn more
           </a>
         </div>

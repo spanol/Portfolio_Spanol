@@ -1,6 +1,8 @@
 import React from "react";
-
+import { handleClick } from "../services/handleClick";
 const Home = () => {
+const url = "https://www.linkedin.com/in/vinicius-spanol";
+
   return (
     <section className="home" id="home">
       <div className="content">
@@ -19,7 +21,7 @@ const Home = () => {
           Redux, Node.js, Nest.js, Express, MongoDB, Prisma, Git, GitHub, and
           more.
         </p>
-        <a href="#" className="btn">
+        <a onClick={() => handleClick(url)} className="btn">
           Contact-me
         </a>
       </div>
