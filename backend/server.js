@@ -23,6 +23,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     const db = client.db("portfolio");
     const projectsCollection = db.collection("projects");
     const contactsCollection = db.collection("contact");
+    const abilitiesCollection = db.collection("abilities");
     app.get('/', (req, res) => {
       res.sendFile(__dirname + '/Template/index.html')
     })
@@ -46,6 +47,16 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         })
         .catch((error) => console.error(error));
     });
+    
+    app.get("/home-abilities", (req, res) => {
+      db.collection("abilities")
+        .find()
+        .toArray()
+        .then((results) => {
+          res.render("habilidades.ejs", { abilities: results });
+        })
+        .catch((error) => console.error(error));
+    });
 
     app.get("/projects", (req, res) => {
       db.collection("projects")
@@ -66,6 +77,16 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         })
         .catch((error) => console.error(error));
     });
+    
+    app.get("/abilities", (req, res) => {
+      db.collection("abilities")
+        .find()
+        .toArray()
+        .then((results) => {
+          res.send(results)
+        })
+        .catch((error) => console.error(error));
+    });
 
     app.put("/projects", (req, res) => {
       projectsCollection
@@ -73,8 +94,16 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
     });
+    
     app.put("/contacts", (req, res) => {
       contactsCollection
+        .findOneAndUpdate(query, update, options)
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
+    });
+    
+    app.put("/abilities", (req, res) => {
+      abilitiesCollection
         .findOneAndUpdate(query, update, options)
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
@@ -96,6 +125,15 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         })
         .catch((error) => console.log(error));
     });
+    
+    app.post("/abilities", (req, res) => {
+      abilitiesCollection
+        .insertOne(req.body)
+        .then((result) => {
+          res.json("Success");
+        })
+        .catch((error) => console.log(error));
+    });
 
     app.delete("/projects", (req, res) => {
       projectsCollection
@@ -106,6 +144,13 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
 
     app.delete("/contacts", (req, res) => {
       contactsCollection
+        .deleteOne({ name: req.body.name })
+        .then((result) => res.json(`Deleted contact`))
+        .catch((error) => console.error(error));
+    });
+    
+    app.delete("/abilities", (req, res) => {
+      abilitiesCollection
         .deleteOne({ name: req.body.name })
         .then((result) => res.json(`Deleted contact`))
         .catch((error) => console.error(error));

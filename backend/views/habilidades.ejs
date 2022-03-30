@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body style="display: flex; flex-direction: column; text-align: center;">
+<div>
+  <h1>Gerenciador de dados - Portfolio Spanol</h1>
+  <h2>Adicionar projetos </h2>
+  <form action="/abilities" method="POST">
+    <input type="text" placeholder="abilitie-language" name="language">
+    <input type="text" placeholder="abilitie-percent" name="percent">
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<div>
+  <h2>Listagem de projetos </h2>
+<ul class="projects">
+  <% for(var i = 0; i < abilities.length; i++) {%>
+    <li class="quote">
+      <span><%= abilities[i].language %></span>
+      <span><%= abilities[i].percent %></span>
+    </li>
+  <% } %>
+</ul>
+</div>
+
+<div>
+  <h2>Editar projetos</h2>
+<p>edite alguma propriedade do projeto</p>
+
+</div>
+</body>
+</html>
