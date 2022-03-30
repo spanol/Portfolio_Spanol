@@ -10,7 +10,7 @@ const About = () => {
 
       <div className="row">
         <div className="image">
-          <img src="images/about-img.jpeg" alt="" />
+          <img src="https://i.ibb.co/k5dMRFK/Photo.jpg" alt="" />
         </div>
 
         <div className="content">

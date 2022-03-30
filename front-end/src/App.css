@@ -114,9 +114,10 @@ section {
   display: none;
 }
 
-/* .header .search-form{
+.header .search-form {
   position: absolute;
-  top:115%; right: 7%;
+  top: 115%;
+  right: 31%;
   background: #fff;
   width: 50rem;
   height: 5rem;
@@ -126,29 +127,29 @@ section {
   transform-origin: top;
 }
 
-.header .search-form.active{
+.header .search-form.active {
   transform: scaleY(1);
 }
 
-.header .search-form input{
+.header .search-form input {
   height: 100%;
   width: 100%;
   font-size: 1.6rem;
-  color:var(--black);
-  padding:1rem;
+  color: var(--black);
+  padding: 1rem;
   text-transform: none;
 }
 
-.header .search-form label{
+.header .search-form label {
   cursor: pointer;
   font-size: 2.2rem;
   margin-right: 1.5rem;
-  color:var(--black);
+  color: var(--black);
 }
 
-.header .search-form label:hover{
-  color:var(--main-color);
-} */
+.header .search-form label:hover {
+  color: var(--main-color);
+}
 
 .home {
   min-height: 100vh;
@@ -282,6 +283,23 @@ section {
   padding: 1rem 0;
 }
 
+.abilities .content h3 {
+  font-size: 3rem;
+  color: #fff;
+  background-color: var(--main-color);
+  width: 90%;
+  padding: 0.3rem;
+  text-align: end;
+  border-radius: 0.9rem;
+}
+
+.abilities .content {
+  display: flex;
+  border: 1px solid var(--main-color);
+  border-radius: 1rem;
+  margin: 10px 0px 0px 0px;
+}
+
 .contact .row {
   display: flex;
   background: var(--black);
@@ -381,7 +399,7 @@ section {
   padding: 1.5rem;
 }
 
-.footer .credit span {
+.footer .credit a {
   color: var(--main-color);
 }
 
@@ -404,30 +422,31 @@ section {
     display: inline-block;
   }
 
-  /* .header .navbar{
-      position: absolute;
-      top:100%; right: -100%;
-      background: #fff;
-      width: 30rem;
-      height: calc(100vh - 9.5rem);
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: #fff;
+    width: 30rem;
+    height: calc(100vh - 9.5rem);
   }
 
-  .header .navbar.active{
-      right:0;
+  .header .navbar.active {
+    right: 0;
   }
 
-  .header .navbar a{
-      color:var(--black);
-      display: block;
-      margin:1.5rem;
-      padding:.5rem;
-      font-size: 2rem;
+  .header .navbar a {
+    color: var(--black);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
   }
 
-  .header .search-form{
-      width: 90%;
-      right: 2rem;
-  } */
+  .header .search-form {
+    width: 90%;
+    right: 2rem;
+  }
 
   .home {
     background-position: left;

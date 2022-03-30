@@ -1,4 +1,5 @@
 import './App.css';
+import Abilities from './components/abilities';
 import About from './components/about';
 import Contact from './components/contact';
 import Footer from './components/footer';
@@ -13,6 +14,7 @@ function App() {
     <Home/>
     <About/>
     <Projects/>
+    <Abilities/>
     <Contact/> 
     <Footer/>
     </div>
