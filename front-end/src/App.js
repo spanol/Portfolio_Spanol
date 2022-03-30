@@ -1,11 +1,11 @@
 import './App.css';
-import Abilities from './components/abilities';
-import About from './components/about';
-import Contact from './components/contact';
-import Footer from './components/footer';
-import Header from './components/header';
-import Home from './components/home';
-import Projects from './components/projects';
+import AbilitiesContainer from './components/abilities/abilitiesContainer';
+import About from './components/about/about';
+import Contact from './components/contact/contact';
+import FooterContainer from './components/footer/footerContainer';
+import Header from './components/header/header';
+import Home from './components/home/home';
+import Projects from './components/projects/projectsContainer';
 
 function App() {
   return (
@@ -14,9 +14,9 @@ function App() {
     <Home/>
     <About/>
     <Projects/>
-    <Abilities/>
+    <AbilitiesContainer/>
     <Contact/> 
-    <Footer/>
+    <FooterContainer/>
     </div>
   );
 }

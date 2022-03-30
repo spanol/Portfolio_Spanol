@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import getFromApi from "../services/api";
-import { handleClick } from "../services/handleClick";
-const Footer = () => {
-  const [contactForm, setContactForm] = useState([]);
-
-  useEffect(() => {
-    getFromApi("contacts", setContactForm);
-  }, []);
-
-  return (
-    <section className="footer">
+const Footer = ({contactForm}) => {
+    return(
+<section className="footer">
       <div className="share">
         {contactForm.map(({ _id, link, icon }) => (
           <a key={_id} onClick={() => handleClick(link)} className={icon}></a>
@@ -29,7 +21,7 @@ const Footer = () => {
         developed by <span><a href="https://www.linkedin.com/in/vinicius-spanol">Vinicius Spanol</a></span> with ❤️{" "}
       </div>
     </section>
-  );
-};
+    )
+}
 
 export default Footer;

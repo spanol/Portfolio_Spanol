@@ -179,6 +179,12 @@ section {
   color: #eee;
 }
 
+.home .content .btn {
+  margin: 0px 80px 0px 80px;
+  display: flex;
+  justify-content: center;
+}
+
 .about .row {
   display: flex;
   align-items: center;
@@ -289,6 +295,7 @@ section {
   background-color: var(--main-color);
   width: 90%;
   padding: 0.3rem;
+  padding-right: 10px;
   text-align: end;
   border-radius: 0.9rem;
 }
@@ -367,6 +374,7 @@ section {
   border: var(--border);
   margin: 0.3rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .footer .share a:hover {

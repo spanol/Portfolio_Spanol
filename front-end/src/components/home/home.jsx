@@ -1,5 +1,5 @@
 import React from "react";
-import { handleClick } from "../services/handleClick";
+import { handleClick } from "../../services/handleClick";
 const Home = () => {
 const url = "https://www.linkedin.com/in/vinicius-spanol";
 
