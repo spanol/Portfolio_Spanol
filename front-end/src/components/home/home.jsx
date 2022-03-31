@@ -8,7 +8,7 @@ const url = "https://www.linkedin.com/in/vinicius-spanol";
       <div className="content">
         <h3>hello world!</h3>
         <p>
-          My name is Vinicius Spanol, i am a Full-Stack Developer based in Praia
+          Im Spanol a Full-Stack Developer based in Praia
           Grande/SP.
         </p>
         <p>

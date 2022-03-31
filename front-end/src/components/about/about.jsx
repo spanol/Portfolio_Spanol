@@ -14,15 +14,19 @@ const About = () => {
         </div>
 
         <div className="content">
-          <h3>what makes me special?</h3>
+          <h3>more about me?</h3>
           <p>
-            I love tech and i love to study, i love to train, i love to eat, i love to sleep and
+            My name is Vinicius Spanol and i love tech and i love to study, i love to go to gym, i love to eat, i love to sleep and
             i love to code.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet
-            enim quod veritatis, nihil voluptas culpa! Neque consectetur
-            obcaecati sapiente?
+            My favorite language is JavaScript and i love the React framework for the front-end, and i love the Node.js framework for
+            the back-end.
+          </p>
+          <p>
+            I've already studied in the Blue Edtech (and im still) and i've studied in the São Judas Tadeu university. In those, i've studied:
+            OOP concepts, Progamming logic, Data Structures, Algorithms, and more.
+            I really love to learn new things and would be happy to learn a new language or neu technology.
           </p>
           <a href="#"  className="btn">
             learn more

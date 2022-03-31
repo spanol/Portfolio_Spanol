@@ -1,5 +1,5 @@
 import React from "react";
-
+import { handleClick } from "../../services/handleClick";
 const Footer = ({contactForm}) => {
     return(
 <section className="footer">

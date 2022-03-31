@@ -12,7 +12,7 @@
     <input type="text" placeholder="project-title" name="title">
     <input type="text" placeholder="project-subtitle" name="subtitle">
     <input type="text" placeholder="project-img" name="img ">
-    <input type="text" placeholder="project-url" name="url ">
+    <input type="text" placeholder="project-url" name="link ">
     <input type="text" placeholder="project-content" name="content">
     <button type="submit">Submit</button>
   </form>
@@ -26,7 +26,8 @@
       <span><%= projects[i].title %></span>
       <!-- Output quote from the iterated quote object -->
       <span><%= projects[i].subtitle %></span>
-      <span><%= projects[i].url %></span>
+      <span><%= projects[i].img %></span>
+      <span><%= projects[i].link %></span>
       <span><%= projects[i].content %></span>
     </li>
   <% } %>
