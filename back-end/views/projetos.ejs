@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <title>MY APP</title>
 </head>
-<body>
+<body style="
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;">
+
 <div class="teste">
   <h1>Gerenciador de dados - Portfolio Spanol</h1>
   <h2>Adicionar projetos </h2>
@@ -19,7 +24,7 @@
 </div>
 <div>
   <h2 style="text-align: center;">Listagem de projetos </h2>
-<ul style="justify-content: space-between;">
+<ul>
   <% for(var i = 0; i < projects.length; i++) {%>
     <li style="margin: 10px 20px 10px 20px;">
       <span><%= projects[i].title %></span>
@@ -33,7 +38,7 @@
 </div>
 
 <div>
-  <h2 style="text-align: center;">Editar projetos </h2>
+  <h2>Editar projetos </h2>
 <p>edite alguma propriedade do projeto</p>
 
 </div>

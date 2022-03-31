@@ -122,7 +122,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
       contactsCollection
         .insertOne(req.body)
         .then((result) => {
-          res.json("Success");
+          console.log(result);
         })
         .catch((error) => console.log(error));
     });
@@ -131,7 +131,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
       abilitiesCollection
         .insertOne(req.body)
         .then((result) => {
-          res.json("Success");
+          console.log(result);
         })
         .catch((error) => console.log(error));
     });
