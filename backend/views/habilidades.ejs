@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: black; color: white">
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
@@ -16,9 +16,9 @@
 </div>
 <div>
   <h2>Listagem de projetos </h2>
-<ul class="projects">
+<ul style="justify-content: space-between;">
   <% for(var i = 0; i < abilities.length; i++) {%>
-    <li class="quote">
+    <li>
       <span><%= abilities[i].language %></span>
       <span><%= abilities[i].percent %></span>
     </li>

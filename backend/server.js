@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -12,7 +13,7 @@ app.use(cors())
 
 // dont forget the <>
 const connectionString =
-  "mongodb+srv://Spanol:122246@cluster.2rq04.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  process.env.DBCREDENTIAL;
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));

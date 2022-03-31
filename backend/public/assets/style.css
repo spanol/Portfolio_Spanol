@@ -1,0 +1,14 @@
+body{
+display: flex;
+flex-direction: column; 
+text-align: center;
+background-color: black;
+}
+
+li{
+    margin: 20px;
+}
+
+.teste{
+    color: purple
+}

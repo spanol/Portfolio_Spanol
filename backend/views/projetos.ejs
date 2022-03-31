@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: black; color: white">
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
 </head>
-<body style="display: flex; flex-direction: column; text-align: center;">
-<div>
+<body>
+<div class="teste">
   <h1>Gerenciador de dados - Portfolio Spanol</h1>
   <h2>Adicionar projetos </h2>
   <form action="/projects" method="POST">
@@ -18,13 +18,11 @@
   </form>
 </div>
 <div>
-  <h2>Listagem de projetos </h2>
-<ul class="projects">
+  <h2 style="text-align: center;">Listagem de projetos </h2>
+<ul style="justify-content: space-between;">
   <% for(var i = 0; i < projects.length; i++) {%>
-    <li class="quote">
-      <!-- Output name from the iterated quote object -->
+    <li style="margin: 10px 20px 10px 20px;">
       <span><%= projects[i].title %></span>
-      <!-- Output quote from the iterated quote object -->
       <span><%= projects[i].subtitle %></span>
       <span><%= projects[i].img %></span>
       <span><%= projects[i].link %></span>
@@ -35,7 +33,7 @@
 </div>
 
 <div>
-  <h2>Editar projetos</h2>
+  <h2 style="text-align: center;">Editar projetos </h2>
 <p>edite alguma propriedade do projeto</p>
 
 </div>
