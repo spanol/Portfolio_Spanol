@@ -9,9 +9,9 @@ const About = () => {
       </h1>
 
       <div className="row">
-        <div className="image">
+        {/* <div className="image">
           <img src="https://i.ibb.co/k5dMRFK/Photo.jpg" alt="" />
-        </div>
+        </div> */}
 
         <div className="content">
           <h3>more about me?</h3>
