@@ -8,7 +8,7 @@ const MongoClient = require("mongodb").MongoClient;
 const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
-
+app.use(express.static(__dirname + '/public'));
 app.use(cors())
 
 // dont forget the <>
@@ -26,10 +26,10 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     const contactsCollection = db.collection("contact");
     const abilitiesCollection = db.collection("abilities");
     app.get('/', (req, res) => {
-      res.sendFile(__dirname + '/Template/index.html')
+      res.sendFile(__dirname + '/public/index.html')
     })
 
-    app.get("/home-projects", (req, res) => {
+    app.get("/home/projects", (req, res) => {
       db.collection("projects")
         .find()
         .toArray()
@@ -39,7 +39,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         .catch((error) => console.error(error));
     });
 
-    app.get("/home-contacts", (req, res) => {
+    app.get("/home/contacts", (req, res) => {
       db.collection("contact")
         .find()
         .toArray()
@@ -49,7 +49,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         .catch((error) => console.error(error));
     });
     
-    app.get("/home-abilities", (req, res) => {
+    app.get("/home/abilities", (req, res) => {
       db.collection("abilities")
         .find()
         .toArray()

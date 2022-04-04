@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" style="background-color: black; color: white">
+
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
 </head>
-<body>
-<div>
-  <h1>Gerenciador de dados - Portfolio Spanol</h1>
-  <h2>Adicionar formas de contato </h2>
-  <form action="/contacts" method="POST">
-    <input type="text" placeholder="nome-contato" name="nome">
-    <input type="text" placeholder="link-contato" name="link">
-    <input type="text" placeholder="link-img-contato" name="img">
-    <button type="submit">Submit</button>
-  </form>
-</div>
-<div>
-  <h2>Listagem de formas de contato </h2>
-<ul>
-  <% for(var i = 0; i < contacts.length; i++) {%>
-    <li>
-      <span><%= contacts[i].nome %></span>
-      <span><%= contacts[i].link %></span>
-      <span><%= contacts[i].img %></span>
-    </li>
-  <% } %>
-</ul>
-</div>
 
-<div>
-  <h2>Editar formas de contato</h2>
-<p>edite alguma forma de contato</p>
+<body style="display: flex; flex-direction: column; text-align: center;">
+  <div>
+    <h1>Gerenciador de dados - Portfolio Spanol</h1>
+    <h2>Adicionar formas de contato </h2>
+    <form action="/contacts" method="POST">
+      <input type="text" placeholder="nome-contato" name="nome">
+      <input type="text" placeholder="link-contato" name="link">
+      <input type="text" placeholder="link-img-contato" name="img">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div>
+    <h2>Listagem de formas de contato </h2>
+    <ul style="justify-content: space-between;">
+      <% for(var i=0; i < contacts.length; i++) {%>
+        <li>
+          <span>Nome: <%= contacts[i].name%></span>
+          <br>
+          <span>Link: <%= contacts[i].link%></span>
+          <br>
+          <span>Icone: <%= contacts[i].icon%></span>
+        </li>
+        <% } %>
+    </ul>
+  </div>
 
-</div>
+  </div>
 </body>
+
 </html>

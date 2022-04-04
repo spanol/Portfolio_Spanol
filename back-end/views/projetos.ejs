@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" style="background-color: black; color: white">
+
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
 </head>
+
 <body style="
 display: flex;
 flex-direction: column;
 justify-content: center;
 text-align: center;">
-
+  
 <div class="teste">
-  <h1>Gerenciador de dados - Portfolio Spanol</h1>
-  <h2>Adicionar projetos </h2>
-  <form action="/projects" method="POST">
-    <input type="text" placeholder="project-title" name="title">
-    <input type="text" placeholder="project-subtitle" name="subtitle">
-    <input type="text" placeholder="project-img" name="img ">
-    <input type="text" placeholder="project-url" name="link ">
-    <input type="text" placeholder="project-content" name="content">
-    <button type="submit">Submit</button>
-  </form>
-</div>
-<div>
-  <h2 style="text-align: center;">Listagem de projetos </h2>
-<ul>
-  <% for(var i = 0; i < projects.length; i++) {%>
-    <li style="margin: 10px 20px 10px 20px;">
-      <span><%= projects[i].title %></span>
-      <span><%= projects[i].subtitle %></span>
-      <span><%= projects[i].img %></span>
-      <span><%= projects[i].link %></span>
-      <span><%= projects[i].content %></span>
-    </li>
-  <% } %>
-</ul>
-</div>
-
-<div>
-  <h2>Editar projetos </h2>
-<p>edite alguma propriedade do projeto</p>
-
-</div>
+    <h1>Gerenciador de dados - Portfolio Spanol</h1>
+    <h2>Adicionar projetos </h2>
+    <form action="/projects" method="POST">
+      <input type="text" placeholder="project-title" name="title">
+      <input type="text" placeholder="project-subtitle" name="subtitle">
+      <input type="text" placeholder="project-img" name="img ">
+      <input type="text" placeholder="project-url" name="link ">
+      <input type="text" placeholder="project-content" name="content">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div>
+    <h2 style="text-align: center;">Listagem de projetos </h2>
+    <ul>
+      <% for(var i=0; i < projects.length; i++) {%>
+        <li style="margin: 10px 20px 10px 20px;">
+          <span>Titulo: <%= projects[i].title %></span>
+          <span>SubTitulo: <%= projects[i].subtitle %></span>
+          <span>Imagem: <%= projects[i].img %></span>
+          <span>Link: <%= projects[i].link %></span>
+          <span>Conteudo: <%= projects[i].content %></span>
+        </li>
+        <% } %>
+    </ul>
+  </div>
 </body>
+
 </html>
