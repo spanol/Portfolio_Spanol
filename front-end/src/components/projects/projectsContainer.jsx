@@ -9,9 +9,7 @@ const ProjectsContainer = () => {
     getFromApi("projects", setProjects);
   }, []);
 
-  return (
-      <Projetcs projects={projects} />
-  );
+  return <Projetcs projects={projects} />;
 };
 
 export default ProjectsContainer;

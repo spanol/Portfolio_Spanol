@@ -9,9 +9,7 @@ const AbilitiesContainer = () => {
     getFromApi("abilities", setAbilities);
   }, []);
 
-  return (
-      <Abilities abilities={abilities} />
-  );
+  return <Abilities abilities={abilities} />;
 };
 
 export default AbilitiesContainer;

@@ -9,8 +9,8 @@ const Header = () => {
   const handleSearch = (e) => {
     setSearch(e.target.value);
     console.log(search);
-    if(window.location.pathname != "/#projects"){
-    window.location.replace("/#projects");
+    if (window.location.pathname != "/#projects") {
+      window.location.replace("/#projects");
     }
   };
   return (

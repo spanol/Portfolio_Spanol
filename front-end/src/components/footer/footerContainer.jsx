@@ -9,9 +9,7 @@ const FooterContainer = () => {
     getFromApi("contacts", setContactForm);
   }, []);
 
-  return (
-    <Footer contactForm={contactForm} />
-  );
+  return <Footer contactForm={contactForm} />;
 };
 
 export default FooterContainer;
